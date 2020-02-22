@@ -2,7 +2,7 @@
 
 Team:
 
-Max Prehl
-Corinna Hoang
-Alex Chebatarev
-Tumaris Yalkun
+* Max Prehl
+* Corinna Hoang
+* Alex Chebatarev
+* Tumaris Yalkun
