@@ -1,0 +1,34 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Recommended Database location
+sqlite/**/*
+
+# Other
+.anaconda
+.bash_history
+.conda
+.coverage
+.dask
+.gitconfig
+.idea
+.idlerc
+.ipython
+.matplotlib
+.octave_hist
+.pylint.d
+.spyder-py3
+.ssh
+.viminfo
+.vscode
