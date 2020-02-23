@@ -1,10 +1,27 @@
 import os
+import sqlite3
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
+from contextlib import closing
+
+# configuration
+DATABASE = './data/LLL.db'
+DEBUG = True
+SECRET_KEY = 'development key'
+USERNAME = 'admin'
+PASSWORD = 'admin'
 
 app = Flask(__name__)
 Bootstrap(app)
 
+def connect_db():
+    return sqlite3.connect(app.config['DATABASE'])
+
+def init_db():
+    with closing(connect_db()) as db:
+        with app.open_resource('data/schema.sql', mode='r') as f:
+            db.cursor().executescript(f.read())
+        db.commit()
 
 @app.route('/')
 def Login():
