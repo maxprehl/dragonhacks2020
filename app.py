@@ -1,7 +1,7 @@
 import os
 import sqlite3
 import json
-from flask import Flask, render_template, g
+from flask import Flask, render_template, g, redirect, url_for
 from flask_bootstrap import Bootstrap
 from contextlib import closing
 
@@ -58,19 +58,19 @@ def Signup():
 @app.route('/Account')
 def Account():
 
-    title = "Account"
-    paragraph = ["User Account Information"]
+	title = "Account"
+	paragraph = ["User Account Information"]
 
-    return render_template('Account.html', title=title, paragraph=paragraph)
+	return render_template('Account.html', title=title, paragraph=paragraph)
 
 
 @app.route('/Learning')
 def Learning():
 
-    title = "Learning"
-    paragraph = ["Do you want to learn on your own or with other people?"]
+	title = "Learning"
+	paragraph = ["Do you want to learn on your own or with other people?"]
 
-    return render_template('learning.html', title=title, paragraph=paragraph)
+	return render_template('learning.html', title=title, paragraph=paragraph)
 
     # Have two options for if the person wants to learn on their own or with other people
     # Option1 = Individual Learning
