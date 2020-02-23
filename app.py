@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
@@ -26,8 +26,8 @@ def Account():
 	
 	title = "Account"
 	paragraph = ["User Account Information"]
-
-        return render_template('Account.html', title = title , paragraph = pa    ragraph)
+	
+	return render_template('Account.html', title = title , paragraph = paragraph)
 
 @app.route('/Learning')
 def Learning():
@@ -35,7 +35,7 @@ def Learning():
 	title = "Learning"
 	paragraph = ["Do you want to learn on your own or with other people?"]
 	
-        return render_template('learning.html', title = title , paragraph = pa    ragraph)
+	return render_template('learning.html', title = title , paragraph = paragraph)
 
 	#Have two options for if the person wants to learn on their own or with other people
 	#Option1 = Individual Learning
