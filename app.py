@@ -12,28 +12,28 @@ def Login():
     title = "Login"
     paragraph = ["Login to your account."]
 
-    return render_template('login.html', title=title, paragraph=paragraph)
+    return render_template('login.html', title = title, paragraph = paragraph)
 
 
-@app.route('/Signup')
+@app.route('/signin')
 def Signup():
 
     title = "Signup"
     paragraph = ["Create an account."]
 
-    return render_template('signup.html', title=title, paragraph=paragraph)
+    return render_template('signin.html', title = title, paragraph = paragraph)
 
 
-@app.route('/Account')
+@app.route('/account')
 def Account():
 
 	title = "Account"
 	paragraph = ["User Account Information"]
 
-	return render_template('Account.html', title=title, paragraph=paragraph)
+	return render_template('account.html', title=title, paragraph=paragraph)
 
 
-@app.route('/Learning')
+@app.route('/learning')
 def Learning():
 
 	title = "Learning"

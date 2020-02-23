@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Signup Page</title>
+  <title>Login Page</title>
   <link rel="stylesheet" href="static/css/styles.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -24,7 +24,7 @@
           <a class="nav-link" href="http://127.0.0.1:5000">Login<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://127.0.0.1:5000/signup">Signup</a>
+          <a class="nav-link" href="http://127.0.0.1:5000/signin">Signup</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="http://127.0.0.1:5000/learning">Learning</a>
@@ -36,6 +36,7 @@
       </form>
     </div>
   </nav>
+
   <div class="jumbotron">
     <div class="container h-100 top">
       <div class="d-flex justify-content-center">
@@ -43,38 +44,38 @@
           <h1 class="brand_logo">Language Learning Lounge</h1>
         </div>
       </div>
-      <div class="d-flex justify-content-center h-100">
-        <div class="user_card">
-          <div class="login_prompt">
-            <h4>Create an account:</h4>
+      <form>
+        <fieldset>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Username</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
           </div>
-          <div class="d-flex justify-content-center form_container">
-            <form>
-              <div class="input-group mb-3">
-                <div class="input-group-append">
-                  <span class="input-group-text"><i class="fas fa-user"></i></span>
-                </div>
-                <input type="text" name="" class="form-control input_user" value="" placeholder="username">
-              </div>
-              <div class="input-group mb-2">
-                <div class="input-group-append">
-                  <span class="input-group-text"><i class="fas fa-key"></i></span>
-                </div>
-                <input type="password" name="" class="form-control input_pass" value="" placeholder="password">
-              </div>
-              <div class="form-group">
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customControlInline">
-                  <label class="custom-control-label" for="customControlInline">Remember me</label>
-                </div>
-              </div>
-                <div class="d-flex justify-content-center mt-3 login_container">
-              <button type="button" class="btn btn-success">Success</button>
-             </div>
-            </form>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
           </div>
-        </div>
-      </div>
+          <div class="form-group">
+            <label for="exampleSelect1">What language do you know?</label>
+            <select class="form-control" id="exampleSelect1">
+              <option>English</option>
+              <option>French</option>
+              <option>Mandarin</option>
+              <option>Russian</option>
+              <option>German</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleSelect2">What language do you want to learn?</label>
+            <select class="form-control" id="exampleSelect2">
+              <option>English</option>
+              <option>French</option>
+              <option>Mandarin</option>
+              <option>Russian</option>
+              <option>German</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-success">Signup</button>
+      </form> 
     </div>
   </div>
 </body>
