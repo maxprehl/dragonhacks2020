@@ -32,8 +32,14 @@ def fill_db():
         with open('data/songs.json') as json_file:
             data = json.load(json_file)
             for song in data['song_info']:
-                db.cursor().execute("insert into songs values (?, ?)",
-                                    [song['id'], json.dumps(song)])
+                db.cursor().execute("insert into songs values (?, ?, ?, ?, ?)",
+                                    [None, song['song_name'], song['unique_words'], song['match_words'], song['max_words']])
+                db.commit()
+        with open('data/users.json') as json_file2:
+            data2 = json.load(json_file2)
+            for user in data2['user_info']:
+                db.cursor().execute("insert into users values (?, ?, ?, ?, ?)",
+                                    [None, user['name'], user['password'], user['main_language'], user['want_language']])
                 db.commit()
 
 

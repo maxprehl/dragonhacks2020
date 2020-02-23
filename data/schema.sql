@@ -11,7 +11,7 @@ CREATE TABLE languages (
   name TEXT NOT NULL
 );
 
-CREATE TABLE user (
+CREATE TABLE users (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   fullname TEXT NOT NULL,
   password TEXT NOT NULL,
