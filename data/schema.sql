@@ -15,7 +15,9 @@ CREATE TABLE user (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   fullname TEXT NOT NULL,
   password TEXT NOT NULL,
-  FOREIGN KEY (main_lang) REFERENCES languages (id)
+  main_lang INTEGER NOT NULL,
+  want_lang INTEGER NOT NULL,
+  FOREIGN KEY (main_lang) REFERENCES languages (id),
   FOREIGN KEY (want_lang) REFERENCES languages (id)
 );
 
