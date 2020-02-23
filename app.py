@@ -27,17 +27,6 @@ def Signup():
 @app.route('/Account')
 def Account():
 
-<<<<<<< HEAD
-	return render_template('Account.html', title = title , paragraph = paragraph)
-
-@app.route('/Learning')
-def Learning():
-	
-	title = "Learning"
-	paragraph = ["Do you want to learn on your own or with other people?"]
-	
-	return render_template('learning.html', title = title , paragraph = paragraph)
-=======
 	title = "Account"
 	paragraph = ["User Account Information"]
 
@@ -46,7 +35,6 @@ def Learning():
 
 @app.route('/Learning')
 def Learning():
->>>>>>> c68ce25a79aee7a468ac4f8d4a04e016e9ff5ff3
 
 	title = "Learning"
 	paragraph = ["Do you want to learn on your own or with other people?"]
