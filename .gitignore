@@ -13,7 +13,7 @@ env.bak/
 venv.bak/
 
 # Recommended Database location
-sqlite/**/*
+data/LLL.db
 
 # Other
 .anaconda

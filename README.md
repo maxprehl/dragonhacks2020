@@ -35,8 +35,16 @@ $ source .venv/bin/activate
 $ pip install -r requirements.txt
 ```
 
-4. Run the app??
+4. Use these commands to initialize and fill the sqlite db
+
+```console
+$ echo "from app import init_db, fill_db; init_db(); fill_db()" | python3
+```
+
+5. Run the app??
 
 ```console
 $ python3 app.py
 ```
+
+
